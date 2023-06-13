@@ -8,9 +8,9 @@ import time
 import os
 import sys
 options = webdriver.ChromeOptions()
-options.add_argument('--headless')
-options.add_argument('--no-sandbox')
-options.add_argument('--disable-dev-shm-usage')
+options.add_argument("start-maximized")
+options.add_argument("disable-infobars")
+options.add_argument("--disable-extensions")
 if getattr(sys, "frozen", False):
     chromedriver_path = os.path.join(sys._MEIPASS, "chromedriver.exe")
     driver = webdriver.Chrome(chromedriver_path, options=options)
