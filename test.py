@@ -30,7 +30,7 @@ def imageDown(keyword):
         time.sleep(0.5)
     #imgs = driver.find_elements_by_css_selector('img.rg_i')
     imgs = driver.find_elements(By.CSS_SELECTOR, 'img.rg_i')
-    os.makedirs({keyword}, exist_ok=True)
+    os.makedirs(keyword, exist_ok=True)
     time.sleep(10)
     for idx, img in enumerate(imgs):
         print(idx,img.get_attribute('src'))
